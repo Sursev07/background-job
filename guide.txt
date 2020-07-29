@@ -1,0 +1,47 @@
+cron => buat bikin jadwal, (notifikasi ke user apabila cart nya belum dicheckout selama lebih dari 1 hari)
+untuk memakai cron di API kalian (node js)
+npm i cron bisa cek dokumentasi di cron npm (dependency project)
+
+
+redis => memory based dictionary lebih cepat daripada database biasa (dimana db biasa disimpan di disk atau ssd)
+mau cepet dan sering diakses taruh di cached/redis 
+npm i redis di computer (bukan dependency project)
+
+jangan lupa nyalain server redis dulu supaya bull nya jalan
+redis-server
+untuk cek servernya reponse 
+redis-cli ping nanti diresponse PONG
+
+bull=> background job redis based
+npm i bull (dependency project)
+
+
+2 tipe penggunaan job
+1. job yang emang kepanggil dari endpoint / actions
+2. job yang emang jalan terus tapi baru ngehit ketika waktunya sesuai (notif email subscription)
+
+
+
+deadline porto 
+kamis jam 13.00
+
+deadline perbaikan 
+kamis jam 23.59
+
+jumat libur idul adha ==> gausah join discord
+
+
+register e-com customer => localhost:3000/register
+
+login admin => localhost:3000/login
+update admin => autorisasi admin
+
+server ada 2 otorisasi => 
+1. otorisasi admin
+2. otorisasi customer 
+
+
+updateProduct => authorizationadmin => menandakan dia role nya admin
+updatecart => otorisasicustomer => menandakan cart itu milik dia
+
+
